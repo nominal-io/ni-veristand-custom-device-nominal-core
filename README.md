@@ -7,7 +7,7 @@ Uses the async template which requires the below:
 - https://github.com/ni/niveristand-custom-device-development-tools/releases/tag/v25.0.0
 - https://github.com/ni/niveristand-custom-device-wizard/releases
 
-However it does not depend on https://github.com/nominal-io/labview-client. It instead directly accesses dlls which must be deployed to any targets.
+However it does not depend on https://github.com/nominal-io/labview-client. It instead directly accesses shared libraries which must be deployed to any targets.
 
 ## Install
 Extract content to:
@@ -121,19 +121,31 @@ At present the following modes are supported:
  * `To Timestamp` will directly call the LabVIEW `To Time Stamp` primitive on the mapped data and use that timestamp directly. Because this is a floating point value, resolution may be lost when using this mode. This is intended to be used with the system channel `Absolute Time`.
  * `Relative Seconds` will treat the time channel as an offset from T0. At present T0 is determined internal to the custom device based on when the engine tells the custom device to begin execution. Then the custom device will calculate `data timestamp = T0 + time channel (relative)`. For most test runs, this mode will provide better resolution but the uncontrolled T0 may result in a fixed offset between the recorded and absolute time. This is intended to be used with the system channel `System Time - Microseconds` or equivalent.
 
-## Licensing and Trademark Information
-The registered trademark Linux® belongs to Linus Torvalds
+## Building from source
 
-For more information about NI® Linux® Real-Time, refer to NI® [documentation](https://www.ni.com/en/shop/linux/introduction-to-ni-linux-real-time.html)
+Uses the async template, which requires the below:
 
-NI® (National Instruments®), NI VeriStand®, and NI SystemLink® are registered trademarks of NI®. All other trademarks are the property of their respective owners. For more information, refer to NI [documentation](https://www.ni.com/en/shop/electronic-test-instrumentation/application-software-for-electronic-test-and-instrumentation-category/systemlink.html)
+- https://github.com/ni/niveristand-custom-device-development-tools/releases/tag/v25.0.0
+- https://github.com/ni/niveristand-custom-device-wizard/releases
 
+## Trademarks
+
+NI® (National Instruments®), NI VeriStand®, and NI SystemLink® are registered trademarks of NI®.
+Linux® is a registered trademark of Linus Torvalds.
+All other trademarks are the property of their respective owners.
+
+For more information about NI® Linux® Real-Time, refer to NI® [documentation](https://www.ni.com/en/shop/linux/introduction-to-ni-linux-real-time.html). For more information about NI SystemLink®, refer to NI® [documentation](https://www.ni.com/en/shop/electronic-test-instrumentation/application-software-for-electronic-test-and-instrumentation-category/systemlink.html).
+
+## License
 
 The LICENSE file in this directory contains information about included code in this repository and the associated licenses. The identified dependencies have the following copyrights:
+
 Copyright (c) 2026 Nominal, Inc.
 Copyright (c) 2018, National Instruments Corp.
 Copyright LabVIEW open source project, specifically:
--Patrick Irvin (@ciozi137)
--Francois Normandin (@francois-normandin)
--James Powell (@drjdpowell)
+
+- Patrick Irvin (@ciozi137)
+- Francois Normandin (@francois-normandin)
+- James Powell (@drjdpowell)
+
 Contributors to https://github.com/LabVIEW-Open-Source/Epoch-Time
