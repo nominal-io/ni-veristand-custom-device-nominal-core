@@ -1,12 +1,15 @@
+# Executables
+*.exe
+Built/
+/source/ProcessingStage
+*build log.txt
+*.UserState
+.token
+*.lvprojstate
+
 # Libraries
 *.lvlibp
 *.llb
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
 
 # Executables
 *.exe

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomDevice xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Custom Device.xsd">
+  <XSDVersion Major="2010" Minor="0" Fix="0" Build="0" />
+  <AddMenu>
+    <eng>Nominal::Nominal Core Streaming</eng>
+    <loc>Nominal::Nominal Core Streaming</loc>
+  </AddMenu>
+  <Version>1.0.0</Version>
+  <Type>Inline HW Interface</Type>
+  <MaxOccurrence>1000</MaxOccurrence>
+  <MainPageGUID>936fc33f-b1a6-49ce-bce7-e773e6cb4405</MainPageGUID>
+  <InitializationVI>
+    <Type>Action</Type>
+    <Item2Launch>
+      <Type>To Common Doc Dir</Type>
+      <Path>Custom Devices\Nominal Core Streaming\Windows\Nominal Core Streaming Configuration.llb\Initialization VI.vi</Path>
+    </Item2Launch>
+  </InitializationVI>
+  <CustomDeviceVI>
+    <SourceDistribution>
+      <Source>
+        <SupportedTarget>Windows</SupportedTarget>
+        <Source>
+          <Type>To Common Doc Dir</Type>
+          <Path>Custom Devices\Nominal Core Streaming\Windows\Nominal Core Streaming Engine Windows.llb\RT Driver VI.vi</Path>
+        </Source>
+        <RealTimeSystemDestination>c:\ni-rt\VeriStand\Custom Devices\Nominal Core Streaming\Nominal Core Streaming Engine Windows.llb\RT Driver VI.vi</RealTimeSystemDestination>
+      </Source>
+      <Source>
+        <SupportedTarget>Linux_x64</SupportedTarget>
+        <Source>
+          <Type>To Common Doc Dir</Type>
+          <Path>Custom Devices\Nominal Core Streaming\Linux_x64\Nominal Core Streaming Engine Linux64.llb\RT Driver VI.vi</Path>
+        </Source>
+        <RealTimeSystemDestination>c:\ni-rt\VeriStand\Custom Devices\Nominal Core Streaming\Nominal Core Streaming Engine Linux64.llb\RT Driver VI.vi</RealTimeSystemDestination>
+      </Source>
+    </SourceDistribution>
+  </CustomDeviceVI>
+  <Dependencies /> 
+  <Pages>
+    <Page>
+      <Name>
+        <eng>Nominal Core Streaming</eng>
+        <loc>Nominal Core Streaming</loc>
+      </Name>
+      <GUID>936fc33f-b1a6-49ce-bce7-e773e6cb4405</GUID>
+      <Glyph>
+        <Type>To Application Data Dir</Type>
+        <Path>System Explorer\Glyphs\databases.png</Path>
+      </Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+        <Path>Custom Devices\Nominal Core Streaming\Windows\Nominal Core Streaming Configuration.llb\Main Page.vi</Path>
+      </Item2Launch>
+      <RunTimeMenu>
+        <MenuItem>
+          <GUID>7b632b0e-1b75-485e-b444-8ee31ffcc8ca</GUID>
+          <Type>Action</Type>
+          <Execution>silent</Execution>
+          <Name>
+            <eng>Export Configuration</eng>
+            <loc>Export Configuration</loc>
+          </Name>
+          <Item2Launch>
+            <Type>To Common Doc Dir</Type>
+            <Path>Custom Devices\Nominal Core Streaming\Windows\Nominal Core Streaming Configuration.llb\Export Configuration RTM.vi</Path>
+          </Item2Launch>
+        </MenuItem>
+      </RunTimeMenu>
+      <ButtonList>
+        <Button>
+          <ID>7b632b0e-1b75-485e-b444-8ee31ffcc8ca-Button</ID>
+          <Glyph>
+            <Type>To Application Data Dir</Type>
+            <Path>System Explorer\Glyphs\Export.png</Path>
+          </Glyph>
+          <Type>Action</Type>
+          <ReferencedGUID>7b632b0e-1b75-485e-b444-8ee31ffcc8ca</ReferencedGUID>
+          <ButtonText>
+            <eng>Export Configuration</eng>
+            <loc>Export Configuration</loc>
+          </ButtonText>
+          <Caption>
+            <eng>Export Configuration</eng>
+            <loc>Export Configuration</loc>
+          </Caption>
+          <TipStrip>
+            <eng>Export Custom Device Configuration</eng>
+            <loc>Export Custom Device Configuration</loc>
+          </TipStrip>
+          <Documentation>
+            <eng>Export Custom Device Configuration</eng>
+            <loc>Export Custom Device Configuration</loc>
+          </Documentation>
+        </Button>
+      </ButtonList>
+      <ActionVIOnCompile>
+        <Type>To Common Doc Dir</Type>
+        <Path>Custom Devices\Nominal Core Streaming\Windows\Nominal Core Streaming Configuration.llb\ActionVIOnCompile.vi</Path>
+      </ActionVIOnCompile>
+      <ActionVIOnSave>
+        <Type>To Common Doc Dir</Type>
+        <Path>Custom Devices\Nominal Core Streaming\Windows\Nominal Core Streaming Configuration.llb\ActionVIOnSave.vi</Path>
+      </ActionVIOnSave>
+    </Page>
+    
+<Page>
+      <Name>
+        <eng>Enable</eng>
+        <loc>Enable</loc>
+      </Name>
+      <GUID>4a38a077-dc8d-46d0-821c-69c63979c629</GUID>
+      <Glyph>
+			<Type>To Application Data Dir</Type>
+			<Path>System Explorer\Glyphs\Triggers.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\Nominal Core Streaming\Windows\Nominal Core Streaming Configuration.llb\Enable.vi</Path>
+      </Item2Launch>
+    </Page>
+<Page>
+      <Name>
+        <eng>Status</eng>
+        <loc>Status</loc>
+      </Name>
+      <GUID>b79b0641-9f91-4c5b-82f7-02598dffe8d5</GUID>
+      <Glyph>
+			<Type>To Application Data Dir</Type>
+			<Path>System Explorer\Glyphs\Warning.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\Nominal Core Streaming\Windows\Nominal Core Streaming Configuration.llb\Status.vi</Path>
+      </Item2Launch>
+    </Page>
+<Page>
+      <Name>
+        <eng>Dataset</eng>
+        <loc>Dataset</loc>
+      </Name>
+      <GUID>103cdb43-9024-4ccf-befa-0c5cd138060c</GUID>
+      <Glyph>
+			<Type>To Application Data Dir</Type>
+			<Path>System Explorer\Glyphs\default fpga category.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\Nominal Core Streaming\Windows\Nominal Core Streaming Configuration.llb\Dataset.vi</Path>
+      </Item2Launch>
+    </Page>
+<Page>
+      <Name>
+        <eng>Stream</eng>
+        <loc>Stream</loc>
+      </Name>
+      <GUID>58b2bb4a-3d23-4307-a360-2df60781b45b</GUID>
+      <Glyph>
+			<Type>To Application Data Dir</Type>
+			<Path>System Explorer\Glyphs\queue.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\Nominal Core Streaming\Windows\Nominal Core Streaming Configuration.llb\Stream.vi</Path>
+      </Item2Launch>
+    </Page>
+<Page>
+      <Name>
+        <eng>Time</eng>
+        <loc>Time</loc>
+      </Name>
+      <GUID>dd2615b5-9b09-4bc9-afd6-539be4c59745</GUID>
+      <Glyph>
+			<Type>To Application Data Dir</Type>
+			<Path>System Explorer\Glyphs\timing.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\Nominal Core Streaming\Windows\Nominal Core Streaming Configuration.llb\Time.vi</Path>
+      </Item2Launch>
+    </Page>
+<Page>
+      <Name>
+        <eng>Decimation</eng>
+        <loc>Decimation</loc>
+      </Name>
+      <GUID>d4c1a460-d7a8-41fc-a423-153e611c0c5c</GUID>
+      <Glyph>
+			<Type>To Application Data Dir</Type>
+			<Path>System Explorer\Glyphs\di section.png</Path>
+		</Glyph>
+      <Item2Launch>
+        <Type>To Common Doc Dir</Type>
+		<Path>Custom Devices\Nominal Core Streaming\Windows\Nominal Core Streaming Configuration.llb\Decimation.vi</Path>
+      </Item2Launch>
+    </Page>
+  </Pages>
+  <CustomXML>
+    <Dummy></Dummy>
+  </CustomXML>
+</CustomDevice>

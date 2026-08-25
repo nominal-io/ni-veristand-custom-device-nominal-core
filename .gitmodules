@@ -1,0 +1,4 @@
+[submodule "labview-client-rs"]
+	path = labview-client-rs
+	url = https://github.com/nominal-io/labview-client-rs
+	branch = main

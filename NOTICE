@@ -1,0 +1,15 @@
+veristand-client
+This product includes software developed by Nominal, Inc.
+Copyright (c) 2026 Nominal, Inc.
+
+
+Some code taken from the niveristand embedded data logger custom device (https://github.com/ni/niveristand-embedded-data-logger-custom-device/blob/main/LICENSE) pulled 08 17 2026
+Copyright (c) 2018 National Instruments Corp.
+
+
+Hand-inlines code from the LabVIEW open source project, "zero clause bsd" license retrieved 08 21 2026
+VIPM: Epoch Date and Time
+Contributors: 
+Patrick Irvin (@ciozi137)
+Francois Normandin (@francois-normandin)
+James Powell (@drjdpowell)
